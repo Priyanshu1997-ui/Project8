@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile   # 👈 force Docker to use this file
+    image: project8-app
+    container_name: project8_app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
